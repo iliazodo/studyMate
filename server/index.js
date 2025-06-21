@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
 
 import connectToMongodb from './config/mongodb.js';
 import questionRoute from './routes/questionRoutes.js';
@@ -14,6 +15,7 @@ const port = process.env.PORT || 3030;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(express.json());
 
 // Routes
