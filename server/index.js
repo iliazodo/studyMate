@@ -8,6 +8,7 @@ import connectToMongodb from "./config/mongodb.js";
 import questionRoute from "./routes/questionRoutes.js";
 import authRouter from "./routes/auth.route.js";
 import userRouter from "./routes/user.route.js";
+import lectureRoutes from './routes/lectureRoutes.js';
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/questions", questionRoute);
 app.use("/api/user" , userRouter);
+app.use('/lectures', lectureRoutes);
 
 app.listen(port, () => {
   console.log("Server is running on port: " + port);

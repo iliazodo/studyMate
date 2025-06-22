@@ -9,7 +9,6 @@ import{
 }from '../controllers/questionController.js';
 
 const router = express.Router();
-
 router.post('/',createQuestion);
 router.get('/',getAllQuestions);
 router.get('/:id',getQuestionById);
