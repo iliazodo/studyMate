@@ -10,7 +10,7 @@ import{
 
 import protectRoute from '../middlewares/protectRoute.js'
 
-const Router = express.router ();
+const router = express.Router ();
 
 router.post('/addPost', protectRoute, createPost);            
 router.get('/getAllPosts', getAllPosts);                  

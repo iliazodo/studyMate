@@ -10,7 +10,7 @@ export const createPost = async (req,res)=>{
             auther : req.user._id,
             lecture : lecture || null,
             tags,
-        })
+        }) 
 
         const savedPost = await newPost.save()
         res.status(201).json(savedPost)

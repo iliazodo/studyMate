@@ -27,9 +27,7 @@ const questionSchema = new mongoose.Schema({
     image:{
         type: String,
     },
-    codeSnippet:{
-        type: String,
-    },
+    
     answers: [{
         answerText:{
             type: mongoose.Schema.Types.ObjectId,
