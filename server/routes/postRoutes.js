@@ -12,10 +12,10 @@ import {protect} from '../middlewares/protectRoute.js'
 
 const Router = express.router ();
 
-router.post('/',protect, createPost)
-router.get('/',getAllPosts)
-router.get('/:id/' , getPostById)
-router.post('/:id/like',protect, toggleLikePost)
-router.delete('/:id',protect, deletePost)
+router.post('/addPost', protect, createPost);            
+router.get('/getAllPosts', getAllPosts);                  
+router.get('/getPostById/:id', getPostById);             
+router.post('/toggleLikePost/:id', protect, toggleLikePost);
+router.delete('/deletePost/:id', protect, deletePost);
 
 export default router;

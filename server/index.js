@@ -9,6 +9,8 @@ import questionRoute from "./routes/questionRoutes.js";
 import authRouter from "./routes/auth.route.js";
 import userRouter from "./routes/user.route.js";
 import lectureRoutes from './routes/lectureRoutes.js';
+import postRoutes from './routes/postRoutes.js';
+
 
 dotenv.config();
 
@@ -25,6 +27,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/questions", questionRoute);
 app.use("/api/user" , userRouter);
 app.use('/lectures', lectureRoutes);
+app.use("/api/posts", postRoutes);
 
 app.listen(port, () => {
   console.log("Server is running on port: " + port);

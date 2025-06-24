@@ -9,10 +9,10 @@ import{
 }from '../controllers/questionController.js';
 
 const router = express.Router();
-router.post('/',createQuestion);
-router.get('/',getAllQuestions);
-router.get('/:id',getQuestionById);
-router.post('/:id/answers',addAnswer);
-router.post('/:questionId/answers/:answerIndex/comments',addCommentToAnswer);
+router.post('/addQuestion', createQuestion);                 
+router.get('/getAllQuestions', getAllQuestions);             
+router.get('/getQuestionById/:id', getQuestionById);         
+router.post('/addAnswerToQuestion/:id', addAnswer);        
+router.post('/addCommentToAnswer/:questionId/:answerIndex', addCommentToAnswer);
 
 export default router;

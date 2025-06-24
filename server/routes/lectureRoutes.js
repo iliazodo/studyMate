@@ -12,11 +12,11 @@ import protectRoute from '../middlewares/protectRoute.js';
 
 const router = express.Router();
 
-router.post('/', createLecture);
-router.get('/', getAllLectures);
-router.get('/:id', getLectureById);
-router.put('/', protectRoute , updateLecture);
-router.delete('/', protectRoute , deleteLecture);
+router.post('/addLecture', createLecture);         
+router.get('/getAllLectures', getAllLectures);     
+router.get('/getLectureById/:id', getLectureById); 
+router.put('/updateLecture/:id', protectRoute, updateLecture); 
+router.delete('/deleteLecture/:id', protectRoute, deleteLecture);
 
 
 export default router;
