@@ -8,14 +8,14 @@ import{
     deletePost
 } from '../controllers/postController.js'
 
-import {protect} from '../middlewares/protectRoute.js'
+import protectRoute from '../middlewares/protectRoute.js'
 
 const Router = express.router ();
 
-router.post('/addPost', protect, createPost);            
+router.post('/addPost', protectRoute, createPost);            
 router.get('/getAllPosts', getAllPosts);                  
 router.get('/getPostById/:id', getPostById);             
-router.post('/toggleLikePost/:id', protect, toggleLikePost);
-router.delete('/deletePost/:id', protect, deletePost);
+router.post('/toggleLikePost/:id', protectRoute, toggleLikePost);
+router.delete('/deletePost/:id', protectRoute, deletePost);
 
 export default router;
